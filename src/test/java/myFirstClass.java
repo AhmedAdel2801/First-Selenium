@@ -15,7 +15,7 @@ public static void main(String[] args) throws InterruptedException {
     Thread.sleep(Duration.ofMillis(500));
     driver.navigate().back();
     driver.findElement(By.linkText("Form Authentication")).click();
-    driver.findElement(By.id("username")).sendKeys("tomsmith");
+    driver.findElement(By.xpath("//input[@name='username']")).sendKeys("tomsmith");
     driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
     driver.findElement(By.cssSelector("button.radius")).click();
 //    driver.findElement(By.tagName("button")).click();
